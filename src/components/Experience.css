@@ -1,0 +1,306 @@
+.experience-section {
+  background: var(--black);
+  position: relative;
+}
+
+.experience-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+}
+
+.experience-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.git-commits {
+  background: rgba(5, 5, 5, 0.8);
+  border: 1px solid var(--gray);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  align-self: start;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.commits-header {
+  background: var(--gray);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--yellow);
+}
+
+.commits-title {
+  font-family: 'Courier New', monospace;
+  color: var(--yellow);
+  font-size: 1rem;
+}
+
+.commits-list {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.commits-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.commits-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.commits-list::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+  border-radius: 4px;
+}
+
+.commits-list::-webkit-scrollbar-thumb:hover {
+  background: var(--yellow-glow);
+}
+
+.branch-section {
+  margin-bottom: 2rem;
+}
+
+.branch-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 215, 0, 0.1);
+  border-left: 3px solid var(--yellow);
+  border-radius: 5px;
+}
+
+.branch-icon {
+  color: var(--yellow);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.branch-name {
+  font-family: 'Courier New', monospace;
+  color: var(--yellow);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+.branch-section.education .branch-header {
+  border-left-color: var(--yellow-glow);
+}
+
+.branch-section.education .branch-name {
+  color: var(--yellow-glow);
+}
+
+.commit-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.commit-item:hover .commit-content {
+  background: rgba(51, 51, 51, 0.4);
+  transform: translateX(5px);
+}
+
+.commit-graph {
+  font-family: 'Courier New', monospace;
+  color: var(--yellow);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 1rem;
+  line-height: 1.5;
+}
+
+.commit-item.education .commit-graph {
+  color: var(--yellow-glow);
+}
+
+.commit-content {
+  flex: 1;
+  padding: 1.5rem;
+  background: rgba(51, 51, 51, 0.2);
+  border-left: 3px solid var(--yellow);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.commit-item.work .commit-content {
+  border-left-color: var(--yellow);
+}
+
+.commit-item.education .commit-content {
+  border-left-color: var(--yellow-glow);
+}
+
+.commit-content:hover {
+  box-shadow: -5px 5px 15px rgba(255, 215, 0, 0.1);
+}
+
+.commit-hash {
+  font-family: 'Courier New', monospace;
+  color: var(--yellow);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.commit-details {
+  margin-left: 0.5rem;
+}
+
+.commit-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 0.3rem;
+}
+
+.commit-org {
+  font-size: 1rem;
+  color: var(--yellow);
+  margin-bottom: 0.3rem;
+}
+
+.commit-date {
+  font-size: 0.9rem;
+  color: var(--light-gray);
+  font-style: italic;
+}
+
+
+.resume-embed {
+  position: sticky;
+  top: 100px;
+  background: var(--gray);
+  border: 1px solid var(--yellow);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 700px;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
+  align-self: start;
+}
+
+.resume-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(51, 51, 51, 0.95);
+  z-index: 1;
+  padding: 2rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.resume-iframe:not([src=""]) ~ .resume-fallback {
+  display: none;
+}
+
+.resume-icon {
+  font-size: 4rem;
+  pointer-events: none;
+}
+
+.resume-download {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--yellow);
+  color: var(--black);
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.resume-download:hover {
+  background: var(--yellow-glow);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.resume-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: relative;
+  z-index: 0;
+}
+
+@media (max-width: 1024px) {
+  .experience-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-embed {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-layout {
+    gap: 2rem;
+  }
+
+  .git-commits {
+    height: 500px;
+  }
+
+  .resume-embed {
+    height: 500px;
+  }
+
+  .commit-title {
+    font-size: 1.1rem;
+  }
+
+  .commit-org {
+    font-size: 0.95rem;
+  }
+
+  .commit-date {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .commits-list {
+    padding: 1rem;
+  }
+
+  .git-commits {
+    height: 400px;
+  }
+
+  .resume-embed {
+    height: 400px;
+  }
+
+  .resume-note {
+    font-size: 0.85rem;
+  }
+}
+
