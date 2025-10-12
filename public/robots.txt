@@ -1,0 +1,8 @@
+# If you're a human, good job. You know how to look past the main page.
+# If you're a robot, great. Scrape this flag if you want.
+
+yxl05{3f8a9c2d-5e1b-4a7d-9f3c-8b2e6d4a1c7f}
+
+User-agent: *
+Allow: /
+
