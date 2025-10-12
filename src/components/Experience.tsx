@@ -98,14 +98,14 @@ const Experience = () => {
           </div>
           <div className="resume-embed">
             <iframe
-              src="personal-website/resume.pdf"
+              src="/resume.pdf"
               className="resume-iframe"
               title="Resume PDF"
             />
             <div className="resume-fallback">
               <div className="resume-icon">📄</div>
               <a 
-                href="personal-website/resume.pdf" 
+                href="/resume.pdf" 
                 className="resume-download"
                 download
               >
