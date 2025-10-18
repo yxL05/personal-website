@@ -40,16 +40,11 @@ const Home = () => {
           </div>
         </div>
         <div className="visual-container">
-          <div className="geometric-art">
-            <div className="cube cube-1"></div>
-            <div className="cube cube-2"></div>
-            <div className="cube cube-3"></div>
-            <div className="circle circle-1"></div>
-            <div className="circle circle-2"></div>
-            <div className="line line-1"></div>
-            <div className="line line-2"></div>
-            <div className="line line-3"></div>
-          </div>
+          <img 
+            src="/geometric-art.gif" 
+            alt="Geometric Animation" 
+            className="geometric-art"
+          />
         </div>
       </div>
       <div className="scroll-indicator">

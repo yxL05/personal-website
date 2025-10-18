@@ -87,140 +87,13 @@
 }
 
 .geometric-art {
-  width: 400px;
-  height: 400px;
-  position: relative;
-}
-
-.cube {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: 2px solid var(--yellow);
-  animation: rotate3d 6s infinite ease-in-out;
-}
-
-.cube-1 {
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
-}
-
-.cube-2 {
-  top: 50%;
-  right: 10%;
-  animation-delay: 2s;
-  width: 80px;
-  height: 80px;
-}
-
-.cube-3 {
-  bottom: 10%;
-  left: 30%;
-  animation-delay: 4s;
-  width: 60px;
-  height: 60px;
-}
-
-@keyframes rotate3d {
-  0%, 100% {
-    transform: rotate(0deg) scale(1);
-    border-color: var(--yellow);
-  }
-  25% {
-    transform: rotate(90deg) scale(1.1);
-  }
-  50% {
-    transform: rotate(180deg) scale(1);
-    border-color: var(--yellow-glow);
-  }
-  75% {
-    transform: rotate(270deg) scale(0.9);
-  }
-}
-
-.circle {
-  position: absolute;
-  border-radius: 50%;
-  border: 2px solid var(--yellow);
-  animation: pulse 4s infinite ease-in-out;
-}
-
-.circle-1 {
-  width: 150px;
-  height: 150px;
-  top: 10%;
-  right: 20%;
-  animation-delay: 1s;
-}
-
-.circle-2 {
-  width: 100px;
-  height: 100px;
-  bottom: 20%;
-  right: 30%;
-  animation-delay: 3s;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.6;
-  }
-}
-
-.line {
-  position: absolute;
-  background: var(--yellow);
-  animation: extend 3s infinite ease-in-out;
-}
-
-.line-1 {
-  width: 2px;
-  height: 0;
-  top: 15%;
-  left: 50%;
-  animation-name: extendVertical;
-}
-
-.line-2 {
-  width: 0;
-  height: 2px;
-  top: 50%;
-  left: 20%;
-  animation-name: extendHorizontal;
-  animation-delay: 1s;
-}
-
-.line-3 {
-  width: 2px;
-  height: 0;
-  bottom: 15%;
-  right: 25%;
-  animation-name: extendVertical;
-  animation-delay: 2s;
-}
-
-@keyframes extendVertical {
-  0%, 100% {
-    height: 0;
-  }
-  50% {
-    height: 150px;
-  }
-}
-
-@keyframes extendHorizontal {
-  0%, 100% {
-    width: 0;
-  }
-  50% {
-    width: 150px;
-  }
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.2));
 }
 
 .scroll-indicator {
@@ -303,9 +176,8 @@
   }
 
   .geometric-art {
-    width: 300px;
-    height: 300px;
-    transform: scale(0.8);
+    max-width: 350px;
+    max-height: 350px;
   }
 }
 
